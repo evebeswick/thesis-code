@@ -43,6 +43,6 @@ Again, file **3. imputation.ipynb** requires `scikit-learn==1.1.3` and `missingp
 
 This repository contains the full code used to generate the results in the thesis, including the complete, amputated and imputed datasets.
 
-Plots included in the thesis are generated using the file 
+Plots included in the thesis are generated using the file **plots.R**.
 
-To run the file users will need to download the relevant results and update the file paths, since the current code reads CSV currently reads CSV files from a local directory (`C:/Users/evebe/...`). 
+To run this R file, users will need to download the relevant results and update the file paths, since the current code reads CSV currently reads CSV files from a local directory (`C:/Users/evebe/...`). 
