@@ -38,3 +38,11 @@ contain code for additional results and configurations.
 
 To run these folders, follow the same order as the main code, starting from **1. data_generation.ipynb** and continuing to **5. results.ipynb**.  
 Again, file **3. imputation.ipynb** requires `scikit-learn==1.1.3` and `missingpy==0.2.0`, while the other files require `scikit-learn==1.4.2`.
+
+## Notes
+
+This repository contains the full code used to generate the results in the thesis, including the complete, amputated and imputed datasets.
+
+Plots included in the thesis are generated using the file 
+
+To run the file users will need to download the relevant results and update the file paths, since the current code reads CSV currently reads CSV files from a local directory (`C:/Users/evebe/...`). 
