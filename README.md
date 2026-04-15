@@ -16,10 +16,10 @@ Run the files in this order:
 
 ## Requirements
 
-- **Files 1. data_generation.ipynb, 2. apply_missing.ipynb, 4. classification.ipynb, and 5. results.ipynb** require:
+- Files **1. data_generation.ipynb**, **2. apply_missing.ipynb**, **4. classification.ipynb**, and **5. results.ipynb** require:
   - `scikit-learn==1.4.2`
 
-- **File 3. imputation.ipynb** requires:
+- File **3. imputation.ipynb** requires:
   - `scikit-learn==1.1.3`
   - `missingpy==0.2.0`
 
@@ -37,4 +37,4 @@ The folders:
 contain code for additional results and configurations.
 
 To run these folders, follow the same order as the main code, starting from **1. data_generation.ipynb** and continuing to **5. results.ipynb**.  
-Again, **file 3. imputation.ipynb** requires `scikit-learn==1.1.3` and `missingpy==0.2.0`, while the other files require `scikit-learn==1.4.2`.
+Again, file **3. imputation.ipynb** requires `scikit-learn==1.1.3` and `missingpy==0.2.0`, while the other files require `scikit-learn==1.4.2`.
