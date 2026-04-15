@@ -45,4 +45,4 @@ This repository contains the full code used to generate the results in the thesi
 
 Plots included in the thesis are generated using the file **plots.R**.
 
-To run this R file, users will need to download the relevant results and update the file paths, since the current code reads CSV currently reads CSV files from a local directory (`C:/Users/evebe/...`). 
+To run this R file, users will need to download the relevant results and update the file paths, since the code currently reads CSV files from a local directory (`C:/Users/evebe/...`). 
