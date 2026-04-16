@@ -5,7 +5,7 @@ library(tidyverse)
 
 # High correlation setting (rho=0.8)
 #### Imputation results ####
-results_imputation <- read.csv("C:/Users/evebe/OneDrive/Documents/Desktop/MT4599 Project in Mathemaics Statistics/results/imputation_results.csv")
+results_imputation <- read.csv("C:/Users/evebe/OneDrive/Documents/Desktop/MT4599 Project in Mathematics Statistics/results/imputation_results.csv")
 
 results_imputation$method <- factor(results_imputation$method, levels = c("Simple", "KNN", "MissForest"))
 results_imputation$split <- factor(results_imputation$split, levels = c("train", "test"), labels = c("Train", "Test"))
@@ -44,7 +44,7 @@ ggplot(data = results_imputation, aes(x = method, y = r2, colour = method)) +
   facet_grid(split ~ missing_rate)
 
 # KS statistics box plots
-ks_results <- read.csv("C:/Users/evebe/OneDrive/Documents/Desktop/MT4599 Project in Mathemaics Statistics/results/ks_per_feature.csv")
+ks_results <- read.csv("C:/Users/evebe/OneDrive/Documents/Desktop/MT4599 Project in Mathematics Statistics/results/ks_per_feature.csv")
 ks_results$method <- factor(ks_results$method, levels = c("simple", "knn", "missforest"), labels = c("Simple", "KNN", "MissForest"))
 ks_results$split <- factor(ks_results$split, levels = c("train", "test"), labels = c("Train", "Test"))
 
@@ -64,13 +64,13 @@ ggplot(data = ks_results, aes(x = missing_rate, y = ks)) +
 
 #### Classification results ####
 
-results_classification <- read.csv("C:/Users/evebe/OneDrive/Documents/Desktop/MT4599 Project in Mathemaics Statistics/results/classification_results.csv")
+results_classification <- read.csv("C:/Users/evebe/OneDrive/Documents/Desktop/MT4599 Project in Mathematics Statistics/results/classification_results.csv")
 results_classification <- results_classification %>% mutate(
   classifier = factor(classifier),
   imputer = factor(imputer, levels = c("simple", "knn", "missforest"), labels = c("Simple", "KNN", "MissForest")),
   missing_rate = factor(missing_rate, levels = c("10%", "25%"), labels = c("Low (10%)", "High (25%)")))
 
-complete_data <- read.csv("C:/Users/evebe/OneDrive/Documents/Desktop/MT4599 Project in Mathemaics Statistics/results/classification_results_complete.csv")
+complete_data <- read.csv("C:/Users/evebe/OneDrive/Documents/Desktop/MT4599 Project in Mathematics Statistics/results/classification_results_complete.csv")
 complete_data <- complete_data %>% mutate(
   classifier = factor(classifier, levels = levels(results_classification$classifier)))
 
@@ -119,7 +119,7 @@ ggplot(results_classification,
 
 
 # Accuracy violin plot
-df <- read.csv("C:/Users/evebe/OneDrive/Documents/Desktop/MT4599 Project in Mathemaics Statistics/results/classification_results.csv")
+df <- read.csv("C:/Users/evebe/OneDrive/Documents/Desktop/MT4599 Project in Mathematics Statistics/results/classification_results.csv")
 df <- df %>%
   mutate(
     missing_rate = factor(missing_rate, levels = c("10%", "25%")),
@@ -156,7 +156,7 @@ ggplot(df, aes(x = accuracy, y = group, colour = missing_rate, linetype = impute
 
 
 # F1 score violin plot
-df <- read.csv("C:/Users/evebe/OneDrive/Documents/Desktop/MT4599 Project in Mathemaics Statistics/results/classification_results.csv")
+df <- read.csv("C:/Users/evebe/OneDrive/Documents/Desktop/MT4599 Project in Mathematics Statistics/results/classification_results.csv")
 df <- df %>%
   mutate(
     missing_rate = factor(missing_rate, levels = c("10%", "25%")),
@@ -193,7 +193,7 @@ ggplot(df, aes(x = f1, y = group, colour = missing_rate, linetype = imputer)) +
         axis.title.x = element_text(size = 14), axis.title.y = element_blank())
 
 # ROC-AUC violin plot
-df <- read.csv("C:/Users/evebe/OneDrive/Documents/Desktop/MT4599 Project in Mathemaics Statistics/results/classification_results.csv")
+df <- read.csv("C:/Users/evebe/OneDrive/Documents/Desktop/MT4599 Project in Mathematics Statistics/results/classification_results.csv")
 df <- df %>%
   mutate(
     missing_rate = factor(missing_rate, levels = c("10%", "25%")),
@@ -235,7 +235,7 @@ ggplot(df, aes(x = roc_auc, y = group, colour = missing_rate, linetype = imputer
 # Low correlation setting (rho=0.2)
 
 #### Imputation results ####
-results_imputationrho02 <- read.csv("C:/Users/evebe/OneDrive/Documents/Desktop/MT4599 Project in Mathemaics Statistics/results/imputation_results_rho02.csv")
+results_imputationrho02 <- read.csv("C:/Users/evebe/OneDrive/Documents/Desktop/MT4599 Project in Mathematics Statistics/results/imputation_results_rho02.csv")
 results_imputationrho02$method <- factor(results_imputationrho02$method, levels = c("Simple", "KNN", "MissForest"))
 results_imputationrho02$split <- factor(results_imputationrho02$split, levels = c("train", "test"), labels = c("Train", "Test"))
 
@@ -276,12 +276,12 @@ ggplot(data = results_imputationrho02, aes(x = method, y = r2, colour = method))
 # Classification accuracy comparison plot
 
 # High correlation data (rho = 0.8)
-results_classification_high <- read.csv("C:/Users/evebe/OneDrive/Documents/Desktop/MT4599 Project in Mathemaics Statistics/results/classification_results.csv")
-complete_data_high <- read.csv("C:/Users/evebe/OneDrive/Documents/Desktop/MT4599 Project in Mathemaics Statistics/results/classification_results_complete.csv")
+results_classification_high <- read.csv("C:/Users/evebe/OneDrive/Documents/Desktop/MT4599 Project in Mathematics Statistics/results/classification_results.csv")
+complete_data_high <- read.csv("C:/Users/evebe/OneDrive/Documents/Desktop/MT4599 Project in Mathematics Statistics/results/classification_results_complete.csv")
 
 # Low correlation data (rho = 0.2)
-results_classification_low <- read.csv("C:/Users/evebe/OneDrive/Documents/Desktop/MT4599 Project in Mathemaics Statistics/results/classification_results_rho02.csv")
-complete_data_low <- read.csv("C:/Users/evebe/OneDrive/Documents/Desktop/MT4599 Project in Mathemaics Statistics/results/classification_results_complete_rho02.csv")
+results_classification_low <- read.csv("C:/Users/evebe/OneDrive/Documents/Desktop/MT4599 Project in Mathematics Statistics/results/classification_results_rho02.csv")
+complete_data_low <- read.csv("C:/Users/evebe/OneDrive/Documents/Desktop/MT4599 Project in Mathematics Statistics/results/classification_results_complete_rho02.csv")
 
 # format classification results
 format_classification <- function(df, corr_label) {
